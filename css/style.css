@@ -1,0 +1,43 @@
+.login-page .login-content {
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+    -webkit-transition: all 550ms ease-in-out;
+    transition: all 550ms ease-in-out;
+}
+
+.login-page .login-form {
+    position: relative;
+    padding-top: 40px;
+    -webkit-transition: all 550ms ease-in-out;
+    transition: all 550ms ease-in-out;
+}
+
+.login-page .login-form .form-group {
+    margin-bottom: 20px;
+    -webkit-transition: all 550ms ease-in-out;
+    transition: all 550ms ease-in-out;
+}
+
+.login-page .form-control:focus {
+    box-shadow: none;
+}
+
+.login-page .btn-login {
+    border: 1px solid #454a54;
+    width: 120px;
+    height: 35px;
+    padding: 0 20px;
+    margin: 0 auto;
+    font-size: 14px;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.login-page .btn-login span {
+    float: right;
+    line-height: 18px;
+}
