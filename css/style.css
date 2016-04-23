@@ -26,6 +26,11 @@
     box-shadow: none;
 }
 
+.login-page .input-group input.error {
+    box-shadow: 0 0 1px #d65048!important;
+    border-color: #d65048!important;
+}
+
 .login-page .btn-login {
     border: 1px solid #454a54;
     width: 120px;

@@ -7,9 +7,6 @@
     <title>登录界面</title>
     <link rel="stylesheet prefetch" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-    <style>
-        .error { box-shadow: 0 0 1px #d65048!important; border-color: #d65048!important;}
-    </style>
 </head>
 
 <body class="login-page">
@@ -53,16 +50,19 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery-html5Validate.js"></script>
 <script type="text/javascript">
-    $.testRemind.css = {
-        borderColor: "#ccc",
-        color: "#555",
-        backgroundColor: "#f0f3f9",
-        borderRadius: "5px"
-    };
-    $("#form_login").html5Validate(function() {
-        alert("全部通过！");
-        //this.submit();	
+    $(function(){
+        $.testRemind.css = {
+            borderColor: "#ccc",
+            color: "#555",
+            backgroundColor: "#f0f3f9",
+            borderRadius: "5px"
+        };
+        $("#form_login").html5Validate(function() {
+            alert("全部通过！");
+            //this.submit();	
+        });
     });
+    
 </script>
 
 </html>
