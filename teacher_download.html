@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>下载跳转链接</title>
+    <title>下载链接跳转</title>
 </head>
 
 <body></body>
@@ -18,14 +18,14 @@
         ;(function() {
             if (downapp_iosUA) {
                 if (downapp_wxUA) {
-                    downapp_link = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.joyshow.joycampus.parent';
+                    downapp_link = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.joyshow.joycampus.teacher';
                 } else {
-                    downapp_link = 'https://appsto.re/cn/SkSZ6.i';
+                    downapp_link = 'https://appsto.re/cn/ldIc7.i';
                 }
             } else if (downapp_androidUA) {
-                downapp_link = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.joyshow.joycampus.parent';
+                downapp_link = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.joyshow.joycampus.teacher';
             } else {
-                downapp_link = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.joyshow.joycampus.parent';
+                downapp_link = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.joyshow.joycampus.teacher';
             }
             window.location.href = downapp_link;
         })();
