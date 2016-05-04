@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>下载跳转链接</title>
+</head>
+
+<body></body>
+<script type="text/javascript">
+    window.onload = function () {
+        var downapp_ua = window.navigator.userAgent.toLowerCase();
+        var downapp_androidUA = downapp_ua.match(/.*?(android).*/i); //android
+        var downapp_iosUA = downapp_ua.indexOf('iphone') >= 0 || downapp_ua.indexOf('ipod') >= 0 || downapp_ua.indexOf('ipad') >= 0; //ios
+        var downapp_wxUA = downapp_ua.match(/.*?(micromessenger\/([0-9.]+))\s*/); //wechat
+        var downapp_qqUA = downapp_ua.match(/.*?(qq\/([0-9.]+))\s*/); //qq 
+        var downapp_weibo = downapp_ua.indexOf('weibo') >= 0; //weibo
+        var downapp_link = '';
+
+        ;(function() {
+            if (!downapp_weibo && !downapp_wxUA && !downapp_qqUA && downapp_androidUA) {
+                window.location.href = 'http://zhushou.360.cn/detail/index/soft_id/3109841';
+            }
+            if (!downapp_weibo && !downapp_wxUA && !downapp_qqUA && downapp_iosUA) {
+                window.location.href = 'https://appsto.re/cn/SkSZ6.i';
+            }
+            if (downapp_iosUA) {
+                if (downapp_weibo) {
+                    // wechatOpenTip();
+                } else if (downapp_wxUA) {
+                    downapp_link = 'http://mp.weixin.qq.com/mp/redirect?url=https://appsto.re/cn/SkSZ6.i';
+                } else {
+                    downapp_link = 'https://appsto.re/cn/SkSZ6.i';
+                }
+            } else if (downapp_androidUA) {
+                if (downapp_weibo) {
+                    downapp_link = 'http://zhushou.360.cn/detail/index/soft_id/3109841';
+                } else if (downapp_wxUA) {
+                    downapp_link = 'http://mp.weixin.qq.com/mp/redirect?url=http://zhushou.360.cn/detail/index/soft_id/3109841';
+                } else {
+                    downapp_link = 'http://zhushou.360.cn/detail/index/soft_id/3109841';
+                }
+            } else {
+                downapp_link = 'http://zhushou.360.cn/detail/index/soft_id/3109841';
+            }
+            window.location.href = downapp_link;
+        })();
+    }
+</script>
+
+</html>
